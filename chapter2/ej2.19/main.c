@@ -41,6 +41,5 @@ int main()
     printf("el numero mayor es %d\n", mayor);
 
     return 0;
-
-
+    
 }

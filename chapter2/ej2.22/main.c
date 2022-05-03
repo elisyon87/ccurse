@@ -6,7 +6,11 @@
 
 main ()
 {
-    printf(" *\n** \n*** \n**** \n***** \n" );
+    printf("*\n** \n*** \n**** \n***** \n" );
 
     return 0;
 }
+
+/**
+ * imprime filas de asteriscos, agregando uno por fila
+**/
