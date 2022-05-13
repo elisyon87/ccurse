@@ -17,9 +17,56 @@
 
 int main()
 {
-    int producto=0, prod1=0, prod2=0, prod3=0, prod4=0, prod5=0;
+    int producto=0, cantidad=0;
+    float prod1=0, prod2=0, prod3=0, prod4=0, prod5=0;
 
-   
+    while (producto != -1) {
+
+    printf("inserte el numero de producto vendido. -1 para finalizar \n");
+    scanf("%d", &producto);
+
+    printf("inserte la cantidad vendida \n");
+    scanf("%d", &cantidad);
+      
+        switch (producto)
+        {
+        case '1':
+            prod1 = prod1 + (float) cantidad * 2.98;
+            break;
+
+        case '2':
+            prod2 = prod2 + (float) cantidad * 4.50;
+            break;
+
+        case '3':
+            prod3 = prod3 + (float) cantidad * 9.98;
+            break;
+
+        case '4':
+            prod4 = prod4 + (float) cantidad * 4.49;
+            break;
+
+        case '5':
+            prod5 = prod5 + (float) cantidad * 6.87;
+            break;
+
+        case '\n':
+        case '\t':
+        break;
+        
+        default:
+            break;
+            
+        }
 
     }
+    
+printf("La cantidad de dinero obtenido por la venta del producto 1 es de %.2f\n, prod1");
+printf("La cantidad de dinero obtenido por la venta del producto 2 es de %.2f\n, prod2");
+printf("La cantidad de dinero obtenido por la venta del producto 3 es de %.2f\n, prod3");
+printf("La cantidad de dinero obtenido por la venta del producto 4 es de %.2f\n, prod4");
+printf("La cantidad de dinero obtenido por la venta del producto 5 es de %.2f\n, prod5");
+
+return 0;
+
 }
