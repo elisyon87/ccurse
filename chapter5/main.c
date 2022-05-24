@@ -8,7 +8,7 @@
  **/
 
 double hipotenusa (double lado1, double lado2);
-double ej54a (void);
+void ej54a (void);
 
 /**
  *   ejercicio 5.4b   
@@ -16,7 +16,7 @@ double ej54a (void);
 **/
 
 int elMenor (int x, int y, int z);
-int ej54b (void);
+void ej54b (void);
 
 /**
  *   ejercicio 5.4c
@@ -32,7 +32,7 @@ void ej54c (void);
 **/
 
 float intAfloat (int numero);
-float ej54d (void);
+void ej54d (void);
 
 int main()
 {
@@ -44,21 +44,19 @@ int main()
  * ej 5.4a
 **/
 
-double hipotenusa (double lado1, double lado2); {
+double hipotenusa (double lado1, double lado2) {
     return (lado1*lado1 + lado2*lado2);
 }
 
-double ej54a (void);{
+void ej54a () {
 
    double lado1;
    double lado2;
 
-   printf("inserte los lados de un triangulo rectangulo \n")
-   scanf("%f%f", lado1, lado2)
+   printf("inserte los lados de un triangulo rectangulo \n");
+   scanf("%f%f", lado1, lado2);
 
    printf("la hipotenusa tiene un valor de: %.2f\n", hipotenusa(lado1, lado2));
-
-   return 0;
 
 }
 
@@ -66,7 +64,7 @@ double ej54a (void);{
  * ej 5.4
 **/
 
-int elMenor (int x, int y, int z);{
+int elMenor (int x, int y, int z) {
 
     int menor = x;
 
@@ -76,44 +74,44 @@ int elMenor (int x, int y, int z);{
     return menor;
 }
 
-int ej54b (void);{
+void ej54b() {
     
     int x, y, z;
 
     printf("introduzca 3 enteros \n");
     scanf("%d%d%d", x, y, z);
 
-    printf("el menor es: %d\n", menor(x, y, z));
+    int menor = elMenor(x, y, z); 
 
-    return 0;
+    printf("el menor es: %d\n", menor);
+
 }
 
 /**
  * ej 5.4c
 **/
 
-void instrucciones (void);{
-    return printf("no se olvide de ejecutar todos los comandos git antes de irse");
+void instrucciones () {
+    printf("no se olvide de ejecutar todos los comandos git antes de irse");
 }
 
-void ej54c (void);{
+void ej54c () {
     
-    printf(instrucciones);
+    instrucciones();
 
-    return 0;
-    }
+}    
 
 /**
  * ej 5.4d
 **/
 
-float intAfloat (int numero);{
+float intAfloat (int numero) {
 
-return float (numero);
+return (float) numero;
 
 }
 
-float ej54d (void);{
+void ej54d () {
 
     int numero;
 
@@ -121,6 +119,5 @@ float ej54d (void);{
     scanf("%d", numero); 
 
     printf("el numero ingresado es: %.2f\n", intAfloat (numero));
-
-    return 0;   
+   
 }
