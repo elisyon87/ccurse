@@ -37,6 +37,42 @@ void ej54d (void);
 int main()
 {
 
+int inciso;
+
+printf("introduzca el inciso que quiera ejecutar\nEOF para terminar \n");
+
+while ((inciso = getchar()) != EOF) {
+    
+    switch (inciso)    {
+    
+    case 'a':
+    case 'A':
+        ej54a();
+        break;
+
+    case 'b':
+    case 'B':
+        ej54b();
+        break;
+
+    case 'c':
+    case 'C':
+        ej54c();
+        break;
+
+    case 'd':
+    case 'D':
+        ej54d;
+        break;
+    
+    default:
+        printf("inciso no encontrado, por favor ingrese otro inciso \n");
+        break;
+    }
+
+}
+
+return 0;
 
 }
 
@@ -92,7 +128,7 @@ void ej54b() {
 **/
 
 void instrucciones () {
-    printf("no se olvide de ejecutar todos los comandos git antes de irse");
+    printf("no se olvide de ejecutar todos los comandos git antes de irse \n");
 }
 
 void ej54c () {
