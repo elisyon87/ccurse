@@ -62,7 +62,7 @@ while ((inciso = getchar()) != EOF) {
 
     case 'd':
     case 'D':
-        ej54d;
+        ej54d();
         break;
     
     default:
@@ -81,16 +81,16 @@ return 0;
 **/
 
 double hipotenusa (double lado1, double lado2) {
-    return (lado1*lado1 + lado2*lado2);
+    return (pow(lado1, 2) + pow(lado2, 2));
 }
 
 void ej54a () {
 
-   double lado1;
-   double lado2;
+   double lado1=0;
+   double lado2=0;
 
    printf("inserte los lados de un triangulo rectangulo \n");
-   scanf("%f%f", lado1, lado2);
+   scanf("%lf%lf", &lado1, &lado2);
 
    printf("la hipotenusa tiene un valor de: %.2f\n", hipotenusa(lado1, lado2));
 
@@ -114,8 +114,12 @@ void ej54b() {
     
     int x, y, z;
 
+    x=0;
+    y=0;
+    z=0;
+    
     printf("introduzca 3 enteros \n");
-    scanf("%d%d%d", x, y, z);
+    scanf("%d%d%d", &x, &y, &z);
 
     int menor = elMenor(x, y, z); 
 
@@ -152,7 +156,7 @@ void ej54d () {
     int numero;
 
     printf("ingrese un numero entero \n");
-    scanf("%d", numero); 
+    scanf("%d", &numero); 
 
     printf("el numero ingresado es: %.2f\n", intAfloat (numero));
    
