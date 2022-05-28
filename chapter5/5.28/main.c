@@ -33,5 +33,3 @@ for ( i = 10; x >= 1; i = i * 10 ) {
 return digitos;
 
 }
-
-int cadanum();
