@@ -1,28 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int aleatorio(int x);
+int aleatorio();
+
+void juego ();
 
 int main() {
 
-int respuesta = 0;
-int numero = 0;
-
-printf("tengo un numero entre 1 y 1000 \npuedes averiguar cual es? \nPor favor escribe la primera respuesta\n");
-scanf("%d", &respuesta);
-
-aleatorio(numero);
-
-while (numero != respuesta) {
-    if (numero > respuesta) {
-        printf("muy arriba, intenta otra vez \n");
-        scanf("%d", &numero);}
-
-    else {
-        printf("muy abajo, intenta otra vez \n");
-        scanf("%d", &numero);
-    }
-}
+juego ();
 
 printf("ganaste!");
 
@@ -43,4 +28,25 @@ while (x < 1) {
 }
 
 return x;
+}
+
+void juego (int x) {
+
+int respuesta = 0;
+int numero = aleatorio();    
+
+printf("tengo un numero entre 1 y 1000 \npuedes averiguar cual es? \nPor favor escribe la primera respuesta\n");
+scanf("%d", &respuesta);
+
+while (numero != respuesta) {
+    if (respuesta > numero) {
+        printf("muy arriba, intenta otra vez \n");
+        scanf("%d", &respuesta);}
+
+    else {
+        printf("muy abajo, intenta otra vez \n");
+        scanf("%d", &respuesta);
+    }
+}
+
 }
