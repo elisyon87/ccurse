@@ -33,7 +33,9 @@ return x;
 void juego (int x) {
 
 int respuesta = 0;
-int numero = aleatorio();    
+int numero = 0;
+
+numero = aleatorio();
 
 printf("tengo un numero entre 1 y 1000 \npuedes averiguar cual es? \nPor favor escribe la primera respuesta\n");
 scanf("%d", &respuesta);
